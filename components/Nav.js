@@ -10,7 +10,7 @@ function Nav() {
   return (
     <NavStyles>
       <h1>Payton Green</h1>
-      <ul>
+      {/* <ul>
         <li className={router.pathname == "/" ? "active" : ""}>
           <Link href="/">About</Link>
         </li>
@@ -19,7 +19,7 @@ function Nav() {
         </li>
         <li className={router.pathname == "/contact" ? "active" : ""}>
           <Link href="/contact">Contact</Link></li>
-      </ul>
+      </ul> */}
     </NavStyles>
   );
 }

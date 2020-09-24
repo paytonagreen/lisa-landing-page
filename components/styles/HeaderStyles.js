@@ -3,9 +3,10 @@ import styled from 'styled-components';
 const HeaderStyles = styled.header`
   display: flex;
   justify-content: center;
-  background: ${props => props.theme.vermillion};
-  color: ${props => props.theme.offwhite};
+  background: ${props => props.theme.teal};
+  color: ${props => props.theme.yellow};
   margin: 0;
+  z-index: 3;
 `;
 
 export const BurgerButton = styled.button`

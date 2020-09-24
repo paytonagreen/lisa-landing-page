@@ -5,6 +5,12 @@ import Header from "../components/Header";
 import Footer from '../components/Footer';
 
 const theme = {
+  red: "#FF0000",
+  lavender: "#E6E6FA",
+  yellow: "#FFDB58",
+  black: "#393939",
+  grey: "3A3A3A",
+  teal: "#008080",
   brown: "#A25F08",
   tan: "#F4E6CC",
   offwhite: "#FCF5EB",
@@ -54,7 +60,6 @@ function MyApp({ Component, pageProps }) {
         <Inner>
           <Component {...pageProps} />
         </Inner>
-        <Footer/>
       </ThemeProvider>
     </>
   );
