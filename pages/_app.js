@@ -11,6 +11,8 @@ const theme = {
   black: "#393939",
   grey: "3A3A3A",
   teal: "#008080",
+  lightgrey: "#E1E1E1",
+  offWhite: "#EDEDED",
   brown: "#A25F08",
   tan: "#F4E6CC",
   offwhite: "#FCF5EB",
@@ -56,7 +58,6 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Meta />
-        <Header />
         <Inner>
           <Component {...pageProps} />
         </Inner>

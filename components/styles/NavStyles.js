@@ -15,7 +15,9 @@ const NavStyles = styled.nav`
   h1 {
     margin: 0;
     font-size: 4rem;
-    color: ${props => props.theme.yellow}
+    opacity: 1;
+    z-index: 3;
+    color: ${props => props.theme.teal}
   }
   ul {
     display: flex;
