@@ -9,17 +9,7 @@ function Nav() {
 
   return (
     <NavStyles>
-      <h1>Payton Green</h1>
-      {/* <ul>
-        <li className={router.pathname == "/" ? "active" : ""}>
-          <Link href="/">About</Link>
-        </li>
-        <li className={router.pathname == "/work" ? "active" : ""}>
-          <Link href="/work">Work</Link>
-        </li>
-        <li className={router.pathname == "/contact" ? "active" : ""}>
-          <Link href="/contact">Contact</Link></li>
-      </ul> */}
+      <h1>Lisa Alley</h1>
     </NavStyles>
   );
 }

@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 const HeaderStyles = styled.header`
   display: flex;
+  opacity: 0;
   justify-content: center;
-  background: ${props => props.theme.teal};
-  color: ${props => props.theme.yellow};
+  background: ${props => props.theme.yellow};
+  color: ${props => props.theme.teal};
   margin: 0;
   z-index: 3;
 `;
