@@ -60,6 +60,9 @@ const GalleryStyles = styled.div`
       color: ${props => props.theme.teal};
     }
     transition: all 1s;
+    @media(max-width: 700px) {
+      right: -12rem
+    }
   }
 `;
 

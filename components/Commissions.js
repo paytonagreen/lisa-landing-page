@@ -8,11 +8,11 @@ const CommissionsStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media (max-width: 700px) {
-    margin: 0 3rem 0 3rem;
-  }
   .content {
     margin: 0 10rem;
+    @media (max-width: 700px) {
+    margin: 0 3rem 0 3rem;
+  }
   }
   h1 {
     color: ${(props) => props.theme.teal};
@@ -33,15 +33,20 @@ const CommissionsStyles = styled.div`
   a {
     display: inline-block;
     position: relative;
-    top: -23rem;
     text-align: center;
     padding: 2rem;
+    top: -20rem;
+    left: -35rem;
     background: ${props => props.theme.lavender};
     border-radius: 100%;
     border: none;
     font-size: 2rem;
     &:hover {
       background: ${props => props.theme.yellow}
+    }
+    @media(max-width: 700px) {
+      top: -3rem;
+      left: -12rem;
     }
     transition: all 1s;
   }
@@ -51,9 +56,9 @@ const CommissionsStyles = styled.div`
 function Commissions() {
   return (
     <CommissionsStyles id="commissions">
+      <a href="#links">Home</a>
       <h1>COMMISSIONS</h1>
       <div className="content">
-      <a href="#links">Home</a>
       <p>
         I’d love to create a piece that’s perfect for your space. Send me an
         e-mail below with what you are envisioning -- the more information, the

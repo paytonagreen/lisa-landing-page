@@ -19,8 +19,8 @@ function ImageLinks() {
     <ImageLinksStyles id="links">
       <ImageLink link="#commissions"color={props => props.theme.lavender} image={crab}>Commissions</ImageLink>
       <ImageLink link="#gallery" color={props => props.theme.yellow} image={seascape}>Gallery</ImageLink>
-      <ImageLink color={props => props.theme.red} image={purslane}>Contact</ImageLink>
       <ImageLink link="https://store.lisa-alley.com" color={props => props.theme.teal} image={oysters}>Store</ImageLink>
+      <ImageLink color={props => props.theme.red} image={purslane}><a href="mailto:lisadianealley@gmail.com">Email</a> | <a target="_blank" href="http://instagram.com/lalley">Instagram</a></ImageLink>
     </ImageLinksStyles>
   )
 };
