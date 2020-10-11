@@ -54,6 +54,10 @@ const ContactStyles = styled.div`
       color: ${props => props.theme.teal};
     }
     transition: all 1s;
+    @media(max-height: 700px) {
+      position: relative;
+      top: -12rem;
+    }
   }
 `;
 
