@@ -11,6 +11,9 @@ min-width: 100%;
   justify-content: center;
   align-items: center;
   font-size: 4rem;
+  @media(max-width: 700px) {
+    height: 50vh;
+  }
   .content {
       background: rgba(0,0,0,0.7);
       padding: 3rem;
