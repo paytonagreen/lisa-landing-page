@@ -8,7 +8,7 @@ const Contact = () => {
     <>
     <Head>
       <title>
-        Contact | Payton Green
+        Contact | Lisa Alley
       </title>
     </Head>
     <ContactStyles>
