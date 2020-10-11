@@ -14,9 +14,6 @@ const HomeStyles = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (max-width: 700px) {
-      min-height: calc(100vh - 100px);
-    }
     .showcase-content {
       display: flex;
       flex-direction: column;
@@ -30,8 +27,11 @@ const HomeStyles = styled.div`
       color: ${(props) => props.theme.yellow};
       h1 {
         display: block;
-        font-size: 8rem;
+        font-size: 10rem;
         margin: 0;
+        @media(max-width: 700px) {
+          font-size: 5rem;
+        }
       }
       a {
         z-index: 3;
@@ -48,9 +48,8 @@ const HomeStyles = styled.div`
     &::before {
       content: '';
       position: absolute;
+      max-width: 1100px;
       margin: auto;
-      top: 0;
-      left: 0;
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.8);

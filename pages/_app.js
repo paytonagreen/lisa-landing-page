@@ -37,14 +37,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
-    font-family: 'Syne';
+    font-family: 'Alegreya Sans SC', sans-serif;
     list-style: none;
   }
   a,
   button{
     text-decoration: none;
     color: ${theme.black};
-    font-family: 'Syne', sans-serif;
+    font-family: 'Alegreya Sans SC', sans-serif;
   }
 `;
 

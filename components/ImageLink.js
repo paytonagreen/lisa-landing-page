@@ -5,7 +5,7 @@ const ImageLinkStyles = styled.div`
 min-width: 100%;
   background: url(${props => props.image}) no-repeat center center/cover;
   width: 100%;
-  height: calc(25vh - .75rem);
+  height: calc(50vh - .5rem);
   z-index: 4;
   display: flex;
   justify-content: center;
@@ -16,6 +16,7 @@ min-width: 100%;
       padding: 3rem;
       color: ${(props) => props.color};
       width: 75%;
+      text-align: center;
       @media(max-width: 700px) {
         font-size: 2.5rem;
       }

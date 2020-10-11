@@ -8,6 +8,7 @@ const CommissionsStyles = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
   .content {
     margin: 0 10rem;
     @media (max-width: 700px) {
@@ -18,9 +19,11 @@ const CommissionsStyles = styled.div`
     color: ${(props) => props.theme.teal};
     text-align: center;
     margin: 0;
+    font-size: 4rem;
   }
   p {
     margin: .75rem;
+    font-size: 2rem;
   }
   ul {
     padding-left: 3rem;
@@ -29,14 +32,15 @@ const CommissionsStyles = styled.div`
   li {
     list-style: square;
     padding-left: 0;
+    font-size: 2rem;
   }
   a {
     display: inline-block;
     position: relative;
     text-align: center;
     padding: 2rem;
-    top: -20rem;
-    left: -35rem;
+    top: -10rem;
+    left: -40rem;
     background: ${props => props.theme.lavender};
     border-radius: 100%;
     border: none;
@@ -45,7 +49,7 @@ const CommissionsStyles = styled.div`
       background: ${props => props.theme.yellow}
     }
     @media(max-width: 700px) {
-      top: -3rem;
+      top: -.5rem;
       left: -12rem;
     }
     transition: all 1s;
