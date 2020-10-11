@@ -2,15 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import ImageCard from './ImageCard';
 
-import bouquet from '../public/img/bouquet.jpg';
-import carrot from '../public/img/carrot.jpg';
-import crab from '../public/img/crab.jpg';
-import oysters from '../public/img/oysters.jpg';
-import purslane from '../public/img/purslane.jpg';
-import scallop from '../public/img/scallop.jpg';
-import seascape from '../public/img/seascape.jpg';
-import sempiternal from '../public/img/sempiternal.jpg';
-import steak from '../public/img/steak.jpg';
+import bouquet from '../public/img/small/bouquet.jpg';
+import carrot from '../public/img/small/carrot.jpg';
+import crab from '../public/img/small/crab.jpg';
+import oysters from '../public/img/small/oysters.jpg';
+import purslane from '../public/img/small/purslane.jpg';
+import scallop from '../public/img/small/scallop.jpg';
+import seascape from '../public/img/small/seascape.jpg';
+import sempiternal from '../public/img/small/sempiternal.jpg';
+import steak from '../public/img/small/steak.jpg';
+import chili from '../public/img/small/chili.jpg';
+import halibut from '../public/img/small/halibut.jpg';
+import mignardise from '../public/img/small/mignardise.jpg'
+
+
 
 const picsArr = [
   bouquet,
@@ -78,7 +83,7 @@ function Gallery() {
     <GalleryStyles id="gallery">
       <a href="#links">Home</a>
       <div className="content">
-      <h1>Gallery</h1>
+      <h1>GALLERY</h1>
       <GalleryGrid>
       <ImageCard image={bouquet}></ImageCard>
       <ImageCard image={carrot}></ImageCard>
@@ -89,6 +94,9 @@ function Gallery() {
       <ImageCard image={sempiternal}></ImageCard>
       <ImageCard image={seascape}></ImageCard>
       <ImageCard image={steak}></ImageCard>
+      <ImageCard image={halibut}></ImageCard>
+      <ImageCard image={mignardise}></ImageCard>
+      <ImageCard image={chili}></ImageCard>
       </GalleryGrid>
       </div>
     </GalleryStyles>
