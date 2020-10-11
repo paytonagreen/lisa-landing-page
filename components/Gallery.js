@@ -15,8 +15,6 @@ import chili from '../public/img/small/chili.jpg';
 import halibut from '../public/img/small/halibut.jpg';
 import mignardise from '../public/img/small/mignardise.jpg'
 
-
-
 const picsArr = [
   bouquet,
   carrot,

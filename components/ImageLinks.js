@@ -2,10 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import ImageLink from './ImageLink'
 
-import crab from "../public/img/crab.jpg";
-import purslane from "../public/img/purslane.jpg";
-import seascape from "../public/img/seascape.jpg";
-import oysters from "../public/img/oysters.jpg";
+import crab from "../public/img/small/crab.jpg";
+import purslane from "../public/img/small/purslane.jpg";
+import seascape from "../public/img/small/seascape.jpg";
+import oysters from "../public/img/small/oysters.jpg";
 
 const ImageLinksStyles = styled.div`
   display: grid;
