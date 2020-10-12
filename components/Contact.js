@@ -5,9 +5,6 @@ import ContactStyles from './styles/ContactStyles';
 const Contact = () => {
   return (
     <>
-      <Head>
-        <title>Contact | Lisa Alley</title>
-      </Head>
       <ContactStyles id="contact">
         <a id="home-link" href="#links">Home</a>
         <div className="content">
