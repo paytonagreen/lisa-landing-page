@@ -5,7 +5,6 @@ import showcaseBackground from '../../public/img/background.jpg';
 const HomeStyles = styled.div`
   min-height: calc(100vh);
   #showcase {
-    padding: 2rem;
     min-height: calc(100vh);
     display: flex;
     justify-content: center;
@@ -15,6 +14,7 @@ const HomeStyles = styled.div`
     justify-content: center;
     align-items: center;
     .showcase-content {
+      background: rgba(0,0,0,0.75);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -44,16 +44,6 @@ const HomeStyles = styled.div`
         background-color: ${props => props.theme.lavender};
         color: ${props => props.theme.black}
       }
-    }
-    &::before {
-      content: '';
-      position: absolute;
-      max-width: 1100px;
-      margin: 0 auto;
-      width: 100%;
-      height: 100vh;
-      background: rgba(0, 0, 0, 0.8);
-      z-index: 2;
     }
   }
 `;

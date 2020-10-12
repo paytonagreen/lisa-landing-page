@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+
+import GalleryStyles from './styles/GalleryStyles';
 import ImageCard from './ImageCard';
 
 import bouquet from '../public/img/small/bouquet.jpg';
@@ -35,40 +37,6 @@ const cardFactory = () => {
 
 const cards = cardFactory();
 
-const GalleryStyles = styled.div`
-  min-height: 100vh;
-  background: ${(props) => props.theme.offwhite};
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    text-align: center;
-    color: ${props => props.theme.teal};
-  }
-  a {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    padding: 2rem;
-    top: 3rem;
-    right: -35rem;
-    background: ${props => props.theme.lavender};
-    border-radius: 100%;
-    border: none;
-    font-size: 2rem;
-    z-index: 3;
-    &:hover {
-      background: ${props => props.theme.yellow};
-      color: ${props => props.theme.teal};
-    }
-    transition: all 1s;
-    @media(max-width: 700px) {
-      right: -12rem
-    }
-  }
-`;
-
 const GalleryGrid = styled.div`
   margin: 2rem;
   display: grid;
@@ -79,9 +47,10 @@ const GalleryGrid = styled.div`
 function Gallery() {
   return (
     <GalleryStyles id="gallery">
-      <a href="#links">Home</a>
+      <a href="/links">Home</a>
       <div className="content">
       <h1>GALLERY</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, velit! Nemo iure est, nihil labore libero magnam ipsum recusandae repudiandae.</p>
       <GalleryGrid>
       <ImageCard image={bouquet}></ImageCard>
       <ImageCard image={carrot}></ImageCard>
