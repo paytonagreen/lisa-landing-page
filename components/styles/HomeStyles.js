@@ -37,7 +37,7 @@ const HomeStyles = styled.div`
         z-index: 3;
         position: absolute;
         bottom: 3rem;
-        padding: 3rem;
+        padding: 2rem;
         border-radius: 100%;
         border: none;
         font-size: 2rem;
@@ -49,7 +49,7 @@ const HomeStyles = styled.div`
       content: '';
       position: absolute;
       max-width: 1100px;
-      margin: auto;
+      margin: 0 auto;
       width: 100%;
       height: 100%;
       background: rgba(0, 0, 0, 0.8);
