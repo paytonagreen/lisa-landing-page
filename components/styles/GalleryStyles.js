@@ -17,14 +17,18 @@ const GalleryStyles = styled.div`
     text-align: center;
     color: ${props => props.theme.teal};
     margin: auto;
+    padding: 0rem;
   }
   a {
+    color: ${props => props.theme.teal}
+  }
+  #home-link {
     display: inline-block;
     position: fixed;
     text-align: center;
     padding: 2rem;
     top: 3rem;
-    right: 10rem;
+    left: 3rem;
     background: ${props => props.theme.lavender};
     border-radius: 100%;
     border: none;
@@ -36,7 +40,8 @@ const GalleryStyles = styled.div`
     }
     transition: all 1s;
     @media(max-width: 700px) {
-      right: 2rem;
+      top: 1rem;
+      left: 1rem;
     }
   }
 `;

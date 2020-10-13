@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Head from 'next/head';
 
 import GalleryStyles from './styles/GalleryStyles';
 import ImageCard from './ImageCard';
@@ -15,7 +16,7 @@ import sempiternal from '../public/img/small/sempiternal.jpg';
 import steak from '../public/img/small/steak.jpg';
 import chili from '../public/img/small/chili.jpg';
 import halibut from '../public/img/small/halibut.jpg';
-import mignardise from '../public/img/small/mignardise.jpg'
+import mignardise from '../public/img/small/mignardise.jpg';
 
 const picsArr = [
   bouquet,
@@ -47,24 +48,32 @@ const GalleryGrid = styled.div`
 function Gallery() {
   return (
     <GalleryStyles id="gallery">
-      <a href="/links">Home</a>
+      <Head>
+        <title>Lisa Alley | Gallery</title>
+      </Head>
+      <a id="home-link" href="/#links">
+        Home
+      </a>
       <div className="content">
-      <h1>GALLERY</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, velit! Nemo iure est, nihil labore libero magnam ipsum recusandae repudiandae.</p>
-      <GalleryGrid>
-      <ImageCard image={bouquet}></ImageCard>
-      <ImageCard image={carrot}></ImageCard>
-      <ImageCard image={crab}></ImageCard>
-      <ImageCard image={oysters}></ImageCard>
-      <ImageCard image={scallop}></ImageCard>
-      <ImageCard image={purslane}></ImageCard>
-      <ImageCard image={sempiternal}></ImageCard>
-      <ImageCard image={seascape}></ImageCard>
-      <ImageCard image={steak}></ImageCard>
-      <ImageCard image={halibut}></ImageCard>
-      <ImageCard image={mignardise}></ImageCard>
-      <ImageCard image={chili}></ImageCard>
-      </GalleryGrid>
+        <h1>GALLERY</h1>
+        <p>Past works for reference.</p>
+        <a href="https://store.lisa-alley.com">
+          <p>Proceed to webstore for available originals and prints.</p>
+        </a>
+        <GalleryGrid>
+          <ImageCard image={bouquet}></ImageCard>
+          <ImageCard image={carrot}></ImageCard>
+          <ImageCard image={crab}></ImageCard>
+          <ImageCard image={oysters}></ImageCard>
+          <ImageCard image={scallop}></ImageCard>
+          <ImageCard image={purslane}></ImageCard>
+          <ImageCard image={sempiternal}></ImageCard>
+          <ImageCard image={seascape}></ImageCard>
+          <ImageCard image={steak}></ImageCard>
+          <ImageCard image={halibut}></ImageCard>
+          <ImageCard image={mignardise}></ImageCard>
+          <ImageCard image={chili}></ImageCard>
+        </GalleryGrid>
       </div>
     </GalleryStyles>
   );

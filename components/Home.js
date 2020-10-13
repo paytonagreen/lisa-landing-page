@@ -9,9 +9,7 @@ function Home() {
         <div className="showcase-content">
           <h1>Lisa Alley</h1>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
-            veniam debitis eos. Temporibus cumque perspiciatis magnam. Tenetur
-            rem magni ab.
+            Original artwork and prints by Lisa Alley out of Austin, TX. All Rights Reserved.
           </p>
       <a href="#links">More</a>
         </div>

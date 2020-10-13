@@ -1,6 +1,7 @@
 import '../styles/globals.css';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Meta from '../components/Meta';
+import Head from 'next/head';
 
 const theme = {
   red: '#FF0000',
