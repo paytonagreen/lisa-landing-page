@@ -6,7 +6,6 @@ const Meta = () => (
     <meta charSet="utf-8"/>
     <link rel="shortcut icon" href="favicon.ico" />
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Anaheim&family=Jura&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" type ="text/css" href="static/nprogress.css"/>
     <title>Lisa Alley</title>
   </Head>
 );

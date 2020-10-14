@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 
 import CommissionsStyles from './styles/CommissionsStyles';
+import CommissionsForm from './CommissionsForm';
 
 function Commissions() {
   return (
@@ -15,10 +16,8 @@ function Commissions() {
       <div className="content">
         <h1>COMMISSIONS</h1>
         <p>
-          I’d love to create a piece that’s perfect for your space. Send me an
-          e-mail at{' '}
-          <a href="mailto:lisadianealley@gmail.com">lisadianealley@gmail.com</a>{' '}
-          with what you are envisioning -- the more information, the better.
+          I’d love to create a piece that’s perfect for your space. Send me a message below
+          about what you are envisioning -- the more information, the better.
         </p>
         <p>Things you could include in your initial message:</p>
         <ul>
@@ -34,7 +33,9 @@ function Commissions() {
           for reaching out!
         </p>
       </div>
+      <CommissionsForm/>
     </CommissionsStyles>
+    
   );
 }
 
