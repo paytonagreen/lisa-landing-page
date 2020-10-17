@@ -12,10 +12,10 @@ import oysters from "../public/img/small/oysters-link.jpg";
 function ImageLinks() {
   return(
     <ImageLinksStyles id="links">
-      <ImageLink link="/commissions"color={props => props.theme.lavender} image={crab}>Commissions</ImageLink>
-      <ImageLink link="/gallery" color={props => props.theme.lavender} image={seascape}>Gallery</ImageLink>
-      <ImageLink link="https://store.lisa-alley.com" color={props => props.theme.lavender} image={oysters}>Store</ImageLink>
-      <ImageLink link="/contact" color={props => props.theme.lavender} image={purslane}>Contact</ImageLink>
+      <ImageLink link="/commissions"image={crab}>Commissions</ImageLink>
+      <ImageLink link="/gallery" image={seascape}>Gallery</ImageLink>
+      <ImageLink link="https://store.lisa-alley.com" image={oysters}>Store</ImageLink>
+      <ImageLink link="/contact" image={purslane}>Contact</ImageLink>
     </ImageLinksStyles>
   )
 };
