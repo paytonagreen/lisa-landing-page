@@ -22,7 +22,6 @@ min-width: 100%;
       padding: 3rem;
       color: ${(props) => props.theme.lavender};
       text-align: center;
-      text-align: center;
       transition: all .5s;
       &:hover {
         background: rgba(200,200,200,0.7);
