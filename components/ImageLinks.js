@@ -13,9 +13,9 @@ function ImageLinks() {
   return(
     <ImageLinksStyles id="links">
       <ImageLink link="/commissions"image={crab}>Commissions</ImageLink>
-      <ImageLink link="/gallery" image={seascape}>Gallery</ImageLink>
-      <ImageLink link="https://store.lisa-alley.com" image={oysters}>Store</ImageLink>
-      <ImageLink link="/contact" image={purslane}>Contact</ImageLink>
+      <ImageLink link="https://store.lisa-alley.com" image={seascape}>Store</ImageLink>
+      <ImageLink link="/contact" image={oysters}>Contact</ImageLink>
+      <ImageLink link="/gallery" image={purslane}>Gallery</ImageLink>
     </ImageLinksStyles>
   )
 };
