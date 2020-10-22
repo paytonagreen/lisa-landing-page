@@ -1,6 +1,7 @@
 import React from 'react';
-import ContactStyles from './styles/ContactStyles';
 import Head from 'next/head';
+
+import ContactStyles from './styles/ContactStyles';
 
 const Contact = () => {
   return (
