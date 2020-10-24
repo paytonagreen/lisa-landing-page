@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import CommissionsStyles from './styles/CommissionsStyles';
 import CommissionsForm from './CommissionsForm';
+import TestimonialList from './TestimonialList';
 
 function Commissions() {
   return (
@@ -29,8 +30,7 @@ function Commissions() {
           <li>Ideal deadline</li>
         </ul>
         <p>
-          I’ll get into contact ASAP with a response and quote. Thanks so much
-          for reaching out!
+          I’ll follow up with a quote or a request for more information. Thanks for reaching out!
         </p>
       </div>
       <CommissionsForm/>

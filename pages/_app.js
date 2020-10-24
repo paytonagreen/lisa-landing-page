@@ -1,7 +1,8 @@
-import '../styles/globals.css';
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { ApolloProvider } from '@apollo/client';
+import '../styles/globals.css';
 import Meta from '../components/Meta';
-import Head from 'next/head';
+import withData from '../hooks/withData';
 
 const theme = {
   red: '#FF0000',
@@ -53,9 +54,9 @@ const Inner = styled.div`
   margin: auto;
   max-width: 1100px;
 `;
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, apollo }) {
   return (
-    <>
+    <ApolloProvider client={apollo}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Meta />
@@ -63,8 +64,8 @@ function MyApp({ Component, pageProps }) {
           <Component {...pageProps} />
         </Inner>
       </ThemeProvider>
-    </>
+    </ApolloProvider>
   );
 }
 
-export default MyApp;
+export default withData(MyApp);

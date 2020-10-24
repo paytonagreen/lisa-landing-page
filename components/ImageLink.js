@@ -1,4 +1,5 @@
 import React from 'react'
+
 import ImageLinkStyles from './styles/ImageLinkStyles'
 
 function ImageLink({children, image, color, link}) {

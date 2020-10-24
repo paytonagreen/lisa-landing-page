@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { gql, useQuery } from '@apollo/client'
 
 import GalleryStyles from './styles/GalleryStyles';
 import ImageCard from './ImageCard';
@@ -18,6 +19,7 @@ import chili from '../public/img/small/chili.jpg';
 import halibut from '../public/img/small/halibut.jpg';
 import mignardise from '../public/img/small/mignardise.jpg';
 
+
 const picsArr = [
   bouquet,
   carrot,
@@ -30,23 +32,34 @@ const picsArr = [
   steak,
 ];
 
-const cardFactory = () => {
-  picsArr.forEach((image) => {
-    return <ImageCard image={image} />;
-  });
-};
-
-const cards = cardFactory();
+const GALLERY_QUERY = gql`
+  query GALLERY_QUERY {
+    items {
+      id
+      title
+      image
+    }
+  }
+`;
 
 const GalleryGrid = styled.div`
-  margin: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  margin: 2rem;
+  max-width: 1100px;
+  grid-gap: 2rem;
+  @media(max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 function Gallery() {
-  return (
+  const { data, loading, error } = useQuery(GALLERY_QUERY);
+
+  if (loading) return <p>Loading...</p>;
+  if (error) <p>{error.message}</p>;
+  console.log(data);
+  if (data) return (
     <GalleryStyles id="gallery">
       <Head>
         <title>Lisa Alley | Gallery</title>
@@ -61,18 +74,9 @@ function Gallery() {
           <p>Proceed to webstore for available originals and prints.</p>
         </a>
         <GalleryGrid>
-          <ImageCard image={bouquet}></ImageCard>
-          <ImageCard image={carrot}></ImageCard>
-          <ImageCard image={crab}></ImageCard>
-          <ImageCard image={oysters}></ImageCard>
-          <ImageCard image={scallop}></ImageCard>
-          <ImageCard image={purslane}></ImageCard>
-          <ImageCard image={sempiternal}></ImageCard>
-          <ImageCard image={seascape}></ImageCard>
-          <ImageCard image={steak}></ImageCard>
-          <ImageCard image={halibut}></ImageCard>
-          <ImageCard image={mignardise}></ImageCard>
-          <ImageCard image={chili}></ImageCard>
+          {data.items.map((item) => {
+            return <ImageCard key={item.id} item={item} />
+          })}
         </GalleryGrid>
       </div>
     </GalleryStyles>

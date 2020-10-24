@@ -1,48 +1,13 @@
 import { useState } from 'react';
-import styled from 'styled-components';
 
+import FormStyles from './styles/CommissionsFormStyles';
 import useForm from '../hooks/useForm';
-
-const FormStyles = styled.form`
-  width: 75%;
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .label-pair {
-    width: 100%;
-    label {
-    }
-  }
-  input {
-    width: 100%;
-    background-color: ${(props) => props.theme.offwhite};
-    outline: none !important;
-    border-radius: 2px;
-    border: 1px solid ${(props) => props.theme.lavender};
-    &:focus {
-      outline: none !important;
-      border: 2px solid ${(props) => props.theme.teal};
-    }
-  }
-  textarea {
-    width: 100%;
-    height: 15rem;
-    background-color: ${(props) => props.theme.offwhite};
-    border: 1px solid ${(props) => props.theme.lavender};
-    border-radius: 2px;
-    &:focus {
-      outline: none !important;
-      border: 2px solid ${(props) => props.theme.teal};
-    }
-  }
-`;
 
 function CommissionsForm() {
   const { handleChange, handleSubmit, values } = useForm(callback);
   const [ savingStarted, setSavingStarted ] = useState(false)
   const [ submitStatus, setSubmitStatus ] = useState('');
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const formURL = "https://doiozktiok.execute-api.us-east-2.amazonaws.com/Prod/submitForm"
 
   function callback() {
@@ -61,6 +26,7 @@ function CommissionsForm() {
             setSubmitStatus('Something went wrong - please try again!')
           }
         }
+        setIsSubmitted(true);
       } catch(error) {
         setSubmitStatus(error.message);
       }
@@ -68,13 +34,15 @@ function CommissionsForm() {
   }
 
   return (
+    <>
+    {submitStatus && <p>{submitStatus}</p>}
     <FormStyles
       onSubmit={handleSubmit}
     >
-      {submitStatus && <p>{submitStatus}</p>}
       <div className="label-pair">
         <label htmlFor="name">Name: </label>
         <input
+          disabled={isSubmitted}
           type="text"
           id="name"
           name="name"
@@ -85,6 +53,7 @@ function CommissionsForm() {
       <div className="label-pair">
         <label htmlFor="email">Email: </label>
         <input
+          disabled={isSubmitted}
           type="text"
           id="email"
           name="email"
@@ -95,14 +64,16 @@ function CommissionsForm() {
       <div className="label-pair">
         <label htmlFor="message">Message: </label>
         <textarea
+          disabled={isSubmitted}
           id="message"
           name="message"
           onChange={handleChange}
           value={values.message}
         />
       </div>
-      <button type="submit">Submit</button>
+      <button disabled={isSubmitted} type="submit">Submit</button>
     </FormStyles>
+    </>
   );
 }
 
