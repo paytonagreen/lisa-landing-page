@@ -6,35 +6,9 @@ import { gql, useQuery } from '@apollo/client'
 import GalleryStyles from './styles/GalleryStyles';
 import ImageCard from './ImageCard';
 
-import bouquet from '../public/img/small/bouquet.jpg';
-import carrot from '../public/img/small/carrot.jpg';
-import crab from '../public/img/small/crab.jpg';
-import oysters from '../public/img/small/oysters.jpg';
-import purslane from '../public/img/small/purslane.jpg';
-import scallop from '../public/img/small/scallop.jpg';
-import seascape from '../public/img/small/seascape.jpg';
-import sempiternal from '../public/img/small/sempiternal.jpg';
-import steak from '../public/img/small/steak.jpg';
-import chili from '../public/img/small/chili.jpg';
-import halibut from '../public/img/small/halibut.jpg';
-import mignardise from '../public/img/small/mignardise.jpg';
-
-
-const picsArr = [
-  bouquet,
-  carrot,
-  crab,
-  oysters,
-  purslane,
-  scallop,
-  seascape,
-  sempiternal,
-  steak,
-];
-
 const GALLERY_QUERY = gql`
   query GALLERY_QUERY {
-    items {
+    items(orderBy: createdAt_DESC) {
       id
       title
       image
@@ -58,7 +32,6 @@ function Gallery() {
 
   if (loading) return <p>Loading...</p>;
   if (error) <p>{error.message}</p>;
-  console.log(data);
   if (data) return (
     <GalleryStyles id="gallery">
       <Head>
