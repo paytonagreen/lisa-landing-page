@@ -32,7 +32,7 @@ function Gallery() {
 
   if (loading) return <p>Loading...</p>;
   if (error) <p>{error.message}</p>;
-  if (data) return (
+  return (
     <GalleryStyles id="gallery">
       <Head>
         <title>Lisa Alley | Gallery</title>
@@ -47,13 +47,14 @@ function Gallery() {
           <p>Proceed to webstore for available originals and prints.</p>
         </a>
         <GalleryGrid>
-          {data.items.map((item) => {
+        {data && data.items.map((item) => {
             return <ImageCard key={item.id} item={item} />
           })}
         </GalleryGrid>
       </div>
     </GalleryStyles>
-  );
+    )
+  ;
 }
 
 export default Gallery;

@@ -7,7 +7,7 @@ import withData from '../hooks/withData';
 const theme = {
   red: '#FF0000',
   lavender: '#E6E6FA',
-  yellow: '#FFDB58',
+  yellow: '#f2a900',
   black: '#393939',
   grey: '3A3A3A',
   teal: '#008080',
