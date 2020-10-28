@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import { gql, useQuery } from '@apollo/client'
+import { gql, useQuery } from '@apollo/client';
 
 import GalleryStyles from './styles/GalleryStyles';
 import ImageCard from './ImageCard';
+import Loader from './Loader';
 
 const GALLERY_QUERY = gql`
   query GALLERY_QUERY {
@@ -22,16 +23,18 @@ const GalleryGrid = styled.div`
   margin: 2rem;
   max-width: 1100px;
   grid-gap: 2rem;
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     grid-template-columns: 1fr;
   }
+`;
+
+const Center = styled.div`
+  text-align: center;
 `;
 
 function Gallery() {
   const { data, loading, error } = useQuery(GALLERY_QUERY);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) <p>{error.message}</p>;
   return (
     <GalleryStyles id="gallery">
       <Head>
@@ -46,15 +49,19 @@ function Gallery() {
         <a href="https://store.lisa-alley.com">
           <p>Proceed to webstore for available originals and prints.</p>
         </a>
-        <GalleryGrid>
-        {data && data.items.map((item) => {
-            return <ImageCard key={item.id} item={item} />
-          })}
-        </GalleryGrid>
+        {loading && <Center><Loader /></Center>}
+        {error && <p>{error.message}</p>}
+        {!loading && !error && (
+          <GalleryGrid>
+            {data &&
+              data.items.map((item) => {
+                return <ImageCard key={item.id} item={item} />;
+              })}
+          </GalleryGrid>
+        )}
       </div>
     </GalleryStyles>
-    )
-  ;
+  );
 }
 
 export default Gallery;
