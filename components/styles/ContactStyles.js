@@ -9,7 +9,7 @@ const ContactStyles = styled.div`
   justify-content: center;
   align-items: left;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1366px;
   min-height: 100vh;
   padding: 2rem;
   display: flex;

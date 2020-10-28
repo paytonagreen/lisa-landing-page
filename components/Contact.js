@@ -5,7 +5,6 @@ import ContactStyles from './styles/ContactStyles';
 
 const Contact = () => {
   return (
-    <>
       <ContactStyles id="contact">
         <Head>
           <title>Lisa Alley | Contact</title>
@@ -26,7 +25,6 @@ const Contact = () => {
           </p>
         </div>
       </ContactStyles>
-    </>
   );
 };
 

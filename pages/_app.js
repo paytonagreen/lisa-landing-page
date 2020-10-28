@@ -52,7 +52,7 @@ const GlobalStyle = createGlobalStyle`
 
 const Inner = styled.div`
   margin: auto;
-  max-width: 1100px;
+  max-width: 1366px;
 `;
 function MyApp({ Component, pageProps, apollo }) {
   return (

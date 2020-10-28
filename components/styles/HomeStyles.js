@@ -13,6 +13,7 @@ const HomeStyles = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Cinzel', "serif";
     .showcase-content {
       background: rgba(0,0,0,0.75);
       display: flex;
@@ -42,7 +43,12 @@ const HomeStyles = styled.div`
         border: none;
         font-size: 2rem;
         background-color: ${props => props.theme.lavender};
-        color: ${props => props.theme.black}
+        color: ${props => props.theme.black};
+        transition: all 1s;
+        &:hover {
+          background-color: ${props => props.theme.yellow};
+          color: ${props => props.theme.teal};
+        }
       }
     }
   }
