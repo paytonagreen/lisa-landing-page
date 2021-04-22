@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const LinksStyles = styled.div`
-.links {
+  .links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 20vh;
@@ -13,13 +13,13 @@ const LinksStyles = styled.div`
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: ${props => props.theme.lavender};
-      color: ${props => props.theme.teal};
+      background: ${(props) => props.theme.lavender};
+      color: ${(props) => props.theme.teal};
       &:nth-child(2) {
-        background-color: ${props => props.theme.teal};
-        color: ${props => props.theme.yellow};
+        background-color: ${(props) => props.theme.teal};
+        color: ${(props) => props.theme.yellow};
         .line {
-          background: ${props => props.theme.yellow}
+          background: ${(props) => props.theme.yellow};
         }
       }
       h2 {
@@ -35,7 +35,7 @@ const LinksStyles = styled.div`
         margin: 1rem;
         height: 2px;
         width: 70%;
-        background: ${props => props.theme.teal};
+        background: ${(props) => props.theme.teal};
       }
     }
   }

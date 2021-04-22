@@ -5,7 +5,7 @@ const ImageLinksStyles = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   z-index: 3;
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     grid-template-columns: 1fr;
     grid-gap: 0;
   }

@@ -1,9 +1,8 @@
-import React from 'react';
-import styled from 'styled-components';
 import Head from 'next/head';
 import { gql, useQuery } from '@apollo/client';
 
 import GalleryStyles from './styles/GalleryStyles';
+import GalleryGridStyles from './styles/GalleryGridStyles';
 import ImageCard from './ImageCard';
 import Loader from './Loader';
 
@@ -17,17 +16,6 @@ const GALLERY_QUERY = gql`
   }
 `;
 
-const GalleryGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  margin: 2rem;
-  max-width: 1100px;
-  grid-gap: 2rem;
-  @media (max-width: 700px) {
-    grid-template-columns: 1fr;
-  }
-`;
-
 const Center = styled.div`
   text-align: center;
 `;
@@ -36,28 +24,32 @@ function Gallery() {
   const { data, loading, error } = useQuery(GALLERY_QUERY);
 
   return (
-    <GalleryStyles id="gallery">
+    <GalleryStyles id='gallery'>
       <Head>
         <title>Lisa Alley | Gallery</title>
       </Head>
-      <a id="home-link" href="/#links">
+      <a id='home-link' href='/#links'>
         Home
       </a>
-      <div className="content">
+      <div className='content'>
         <h1>GALLERY</h1>
         <p>Past works for reference.</p>
-        <a href="https://store.lisa-alley.com">
+        <a href='https://store.lisa-alley.com'>
           <p>Proceed to webstore for available originals and prints.</p>
         </a>
-        {loading && <Center><Loader /></Center>}
+        {loading && (
+          <Center>
+            <Loader />
+          </Center>
+        )}
         {error && <p>{error.message}</p>}
         {!loading && !error && (
-          <GalleryGrid>
+          <GalleryGridStyles>
             {data &&
               data.items.map((item) => {
                 return <ImageCard key={item.id} item={item} />;
               })}
-          </GalleryGrid>
+          </GalleryGridStyles>
         )}
       </div>
     </GalleryStyles>
