@@ -4,7 +4,7 @@ import FormStyles from './styles/CommissionsFormStyles';
 import useForm from '../hooks/useForm';
 
 function CommissionsForm() {
-  const { handleChange, handleSubmit, values } = useForm(callback);
+  const {handleChange, handleSubmit, values } = useForm(callback);
   const [savingStarted, setSavingStarted] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
