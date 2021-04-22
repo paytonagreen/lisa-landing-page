@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { gql, useQuery } from '@apollo/client';
 
+import Center from './styles/Center';
 import GalleryStyles from './styles/GalleryStyles';
 import GalleryGridStyles from './styles/GalleryGridStyles';
 import ImageCard from './ImageCard';
@@ -14,10 +15,6 @@ const GALLERY_QUERY = gql`
       image
     }
   }
-`;
-
-const Center = styled.div`
-  text-align: center;
 `;
 
 function Gallery() {
@@ -44,12 +41,14 @@ function Gallery() {
         )}
         {error && <p>{error.message}</p>}
         {!loading && !error && (
-          <GalleryGridStyles>
-            {data &&
-              data.items.map((item) => {
-                return <ImageCard key={item.id} item={item} />;
-              })}
-          </GalleryGridStyles>
+          <a href='https://store.lisa-alley.com'>
+            <GalleryGridStyles>
+              {data &&
+                data.items.map((item) => {
+                  return <ImageCard key={item.id} item={item} />;
+                })}
+            </GalleryGridStyles>
+          </a>
         )}
       </div>
     </GalleryStyles>
