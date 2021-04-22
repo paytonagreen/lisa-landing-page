@@ -1,17 +1,16 @@
-import React from "react";
-
-import HomeStyles from "./styles/HomeStyles";
+import HomeStyles from './styles/HomeStyles';
 
 function Home() {
   return (
     <HomeStyles>
-      <div id="showcase">
-        <div className="showcase-content">
+      <div id='showcase'>
+        <div className='showcase-content'>
           <h1>Lisa Alley</h1>
           <p>
-            Original artwork and prints by Lisa Alley out of Austin, TX. All Rights Reserved.
+            Original artwork and prints by Lisa Alley out of Austin, TX. All
+            Rights Reserved.
           </p>
-      <a href="#links">More</a>
+          <a href='#links'>More</a>
         </div>
       </div>
     </HomeStyles>

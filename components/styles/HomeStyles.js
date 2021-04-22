@@ -13,9 +13,9 @@ const HomeStyles = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Cinzel', "serif";
+    font-family: 'Cinzel', 'serif';
     .showcase-content {
-      background: rgba(0,0,0,0.75);
+      background: rgba(0, 0, 0, 0.75);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -30,7 +30,7 @@ const HomeStyles = styled.div`
         display: block;
         font-size: 10rem;
         margin: 0;
-        @media(max-width: 700px) {
+        @media (max-width: 700px) {
           font-size: 5rem;
         }
       }
@@ -42,12 +42,12 @@ const HomeStyles = styled.div`
         border-radius: 100%;
         border: none;
         font-size: 2rem;
-        background-color: ${props => props.theme.lavender};
-        color: ${props => props.theme.black};
+        background-color: ${(props) => props.theme.lavender};
+        color: ${(props) => props.theme.black};
         transition: all 1s;
         &:hover {
-          background-color: ${props => props.theme.yellow};
-          color: ${props => props.theme.teal};
+          background-color: ${(props) => props.theme.yellow};
+          color: ${(props) => props.theme.teal};
         }
       }
     }

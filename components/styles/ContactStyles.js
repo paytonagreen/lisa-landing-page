@@ -19,10 +19,10 @@ const ContactStyles = styled.div`
   @media (max-width: 700px) {
   }
   .content {
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     width: 50%;
     padding: 1rem;
-    @media(max-width: 700px) {
+    @media (max-width: 700px) {
       width: 80%;
     }
     p {
@@ -44,17 +44,17 @@ const ContactStyles = styled.div`
     text-align: center;
     padding: 2rem;
     top: -20rem;
-    background: ${props => props.theme.lavender};
+    background: ${(props) => props.theme.lavender};
     border-radius: 100%;
     border: none;
     font-size: 2rem;
     z-index: 3;
     &:hover {
-      background: ${props => props.theme.yellow};
-      color: ${props => props.theme.teal};
+      background: ${(props) => props.theme.yellow};
+      color: ${(props) => props.theme.teal};
     }
     transition: all 1s;
-    @media(max-height: 700px) {
+    @media (max-height: 700px) {
       position: relative;
       top: -12rem;
     }

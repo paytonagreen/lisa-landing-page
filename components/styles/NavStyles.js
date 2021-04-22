@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const NavStyles = styled.nav`
   width: 100%;
@@ -8,7 +8,7 @@ const NavStyles = styled.nav`
   text-decoration: none;
   max-width: 1100px;
   padding: 1.5rem;
-  @media(max-width: 700px) {
+  @media (max-width: 700px) {
     justify-content: center;
     padding: 1rem;
   }
@@ -17,28 +17,28 @@ const NavStyles = styled.nav`
     font-size: 4rem;
     opacity: 1;
     z-index: 3;
-    color: ${props => props.theme.teal}
+    color: ${(props) => props.theme.teal};
   }
   ul {
     display: flex;
     list-style: none;
     font-size: 2rem;
-    @media(max-width: 700px) {
+    @media (max-width: 700px) {
       display: none;
     }
     li.active {
-        border-bottom: 2px solid ${props => props.theme.blue};
-      }
+      border-bottom: 2px solid ${(props) => props.theme.blue};
+    }
     li {
       margin-left: 2rem;
       border-bottom: 2px solid transparent;
       transition: all 1.5s ease-out;
-      
+
       &:hover {
-        border-bottom: 2px solid ${props => props.theme.lightblue};
+        border-bottom: 2px solid ${(props) => props.theme.lightblue};
       }
     }
   }
 `;
 
-export default NavStyles
+export default NavStyles;
